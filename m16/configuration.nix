@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, ... }:
 
 {
@@ -21,7 +17,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "m16"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -78,7 +74,7 @@
   };
 
 
-  nix.settings.trusted-users = ["root" "hank" "linwhite"];
+  nix.settings.trusted-users = ["root" "linwhite"];
   nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
 
   # programs.firefox.enable = true;
