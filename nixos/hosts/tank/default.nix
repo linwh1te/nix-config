@@ -54,6 +54,8 @@ in {
     linwhite = {
       home = {
         profiles = with homeProfiles; [
+          base
+          dev
           core
           gui.linux
         ];
